@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+.myForm{
+margin: auto;
+font-family: sans-serif;
+font-size: 20px;
+padding: 50px;
+background-color: oldlace;
+}
+</style>
+<script type="text/javascript">
+	function validation()
+	{
+		if(document.regForm.txtUserName.value=="")
+			{
+			alert("Please Enter UserName");
+			return false;
+			}
+		if(document.regForm.txtPAssword.value=="")
+			{
+			alert("Please Enter password");
+			return false;
+			}
+		if(document.regForm.txtEmail.value=="")
+			{
+			alert("Please Enter Email-ID");
+			return false;
+			}
+		if((document.regForm.gender[0].checked==false)&&(document.regFrom.gender[1].checked==false))
+			{
+			alert("Please select Gender");
+			return false;
+			}
+		if(document.regForm.age.selectedIndex==0)
+			{
+			alert("Please select Age group");
+			return false;
+			}
+		if(document.regForm.terms.checked==false)
+			{
+			alert("Please Agree terms and condition");
+			return false;
+			}
+	}
+	
+</script>
+</head>
+<body style="background-color: antiquewhite"
+    >
+<h1 style="text-align: center; font-family: cursive; color: crimson">Registration Form</h1>
+<hr size="10px" color="green">
+<form action="Welcome.html" method="get" onsubmit="return validation();" name="regForm" >
+<table border="5" style="border-color: teal" class="myForm">
+<tr>
+<td>Enter UserName : </td>
+<td><input type="text" name="txtUserName"></td>
+</tr>
+<tr>
+<td>Enter Password : </td>
+<td><input type="password" name="txtPAssword"></td>
+</tr>
+<tr>
+<td>Enter Email-ID : </td>
+<td><input type="email" name="txtEmail" ></td>
+</tr>
+<tr>
+<td>Select Gender</td>
+<td> Female <input type="radio" name="gender" value="female">
+     Male <input type="radio" name="gender" value="male">
+</td>
+</tr>
+<tr>
+<td>Select Age Group</td>
+<td>
+<select name="age">
+<option value="Select">Select</option>
+<option value="21-25">21-25</option>
+<option value="26-30">26-30</option>
+<option value="31-35">31-35</option>
+<option value="36-40">36-40</option>
+</select>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"	><input type="checkbox" name="terms" value="checked"></td>
+<td>Agree Terms and Condition</td>
+</tr>
+<tr style="text-align: center;">
+<td><input type="reset" value="RESET"></td>
+<td><input type="submit" value="SUBMIT"></td>
+</tr>
+
+</table>
+</form>
+<hr size="10px" color="green">
+</body>
+</html>
