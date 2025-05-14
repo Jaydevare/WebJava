@@ -7,6 +7,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.zone.ZoneRulesException;
 
 /**
  * Servlet implementation class MyServlet
@@ -31,7 +32,7 @@ public class MyServlet extends HttpServlet {
 		response.setContentType("text/html");//MIME Type
 		PrintWriter pw = response.getWriter();
 		
-		String uname = request.getParameter("txtUserName");
+		/**String uname = request.getParameter("txtUserName");
 		String pwd = request.getParameter("txtPAssword");
 		
 		if((uname.equals("admin"))&& (pwd.equals("admin123")))
@@ -41,7 +42,53 @@ public class MyServlet extends HttpServlet {
 		else
 		{
 			pw.write("<h1> Invalid Username and password </h1>");
+		}*/
+		
+		int num1 = Integer.parseInt(request.getParameter("num1"));
+		int num2 = Integer.parseInt(request.getParameter("num2"));
+		String name = request.getParameter("maths");
+		int res=0;
+		
+		if(name.equals("add"))
+		{
+			res = num1+num2;
+			pw.print(res);
 		}
+		else if(name.equals("sub"))
+		{
+			res = num1-num2;
+			pw.print(res);
+		}
+		else if(name.equals("mul"))
+		{
+			res = num1*num2;
+			pw.print(res);
+		}
+		else if(name.equals("div"))
+		{
+			if(num2==0) {
+				pw.write("<br>cannot divide by zero......<br>");
+			}
+			else
+			{
+				res = num1/num2;
+				pw.print(res);
+			}
+		}
+		
+		/**int res = num1+num2;
+		res = num1-num2;
+		res = num1*num2;
+		
+		if(num2 == 0)
+		{
+			pw.write("Cannot Divide by zero");
+		}
+		else
+			res = num1/num2;
+		
+		pw.println(res);*/
+		
 		
 	}
 

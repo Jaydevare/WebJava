@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+.cal
+	{
+		border: 3px solid black;
+		margin: auto;
+		padding: 30px;
+		border-radius: 10px;
+	}

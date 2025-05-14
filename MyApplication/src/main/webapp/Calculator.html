@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+	.cal
+	{
+		border: 3px solid black;
+		margin: auto;
+		padding: 30px;
+		border-radius: 10px;
+		height: 100px;
+		width: 250px;
+		text-align: center;
+	}
+	.inp
+	{
+		width: 80px;
+		margin: 5px
+	}
+	.btn
+	{
+		width: 40px;
+		margin: 5px;	
+	}	
+	
+</style>
+</head>
+<body>
+<h1>Calculator</h1>
+
+<div >
+	<form action="serv1" class="cal" name="calci">
+		<label>Enter Number 1</label>
+		<input type="number" name="num1" class="inp"><br>
+		<label>Enter Number 2</label>
+		<input type="number" name="num2" class="inp"><br>
+		<label>Result&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+		<input type="number" name="res" class="inp" readonly="readonly">
+		<br>
+		<button class="btn" name="maths" value="add">Add</button>
+		<button class="btn" name="maths" value="sub">Sub</button>
+		<button class="btn" name="maths" value="mul">Multi</button>
+		<button class="btn" name="maths" value="div">Divi</button>
+	</form>
+</div>
+</body>
+</html>
