@@ -30,7 +30,7 @@ background-color: oldlace;
 			alert("Please Enter Email-ID");
 			return false;
 			}
-		if((document.regForm.gender[0].checked==false)&&(document.regFrom.gender[1].checked==false))
+		if((document.regForm.gender[0].checked==false)&&(document.regForm.gender[1].checked==false))
 			{
 			alert("Please select Gender");
 			return false;
@@ -52,7 +52,7 @@ background-color: oldlace;
 <body style="background-color: antiquewhite">
 <h1 style="text-align: center; font-family: cursive; color: crimson">Registration Form</h1>
 <hr size="10px" color="green">
-<form action="Welcome.html" method="get" onsubmit="return validation();" name="regForm" >
+<form action="Servlet" method="get" onsubmit="return validation();" name="regForm" >
 <table border="5" style="border-color: teal" class="myForm">
 <tr>
 <td>Enter UserName : </td>
@@ -85,7 +85,7 @@ background-color: oldlace;
 </td>
 </tr>
 <tr>
-<td style="text-align: center;"	><input type="checkbox" name="terms" value="checked"></td>
+<td style="text-align: center;"	><input type="checkbox" name="terms"></td>
 <td>Agree Terms and Condition</td>
 </tr>
 <tr style="text-align: center;">

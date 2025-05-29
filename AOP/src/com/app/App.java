@@ -1,0 +1,23 @@
+package com.app;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.app.dao.AccountDAO;
+import com.app.dao.MembershipDOA;
+
+public class App {
+
+	public static void main(String[] args) 
+	{
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(DemoConfigClass.class);
+		AccountDAO acc = context.getBean("accountDAO",AccountDAO.class);
+		MembershipDOA mbmd = context.getBean("membershipDOA",MembershipDOA.class);
+		
+		acc.addAccount();
+		mbmd.addAccount();
+		mbmd.addSilly();
+		acc.doWork(10, 5);
+		System.out.println(mbmd.doWork(5, 4));
+		
+	}
+}
