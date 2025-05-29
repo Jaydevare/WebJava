@@ -1,0 +1,5 @@
+package com.app.aspect;
+
+public class MyLoggingAspect {
+
+}

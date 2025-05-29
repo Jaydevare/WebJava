@@ -1,0 +1,31 @@
+package com.app.beans;
+
+import com.app.utility.Coach;
+import com.app.utility.FortuneService;
+
+public class TennisCoachh implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public TennisCoachh() {
+		System.out.println("In def of Tennis");
+	}
+	
+	public TennisCoachh(FortuneService fortuneService) {
+		super();
+		System.err.println("In param of tennis");
+		this.fortuneService = fortuneService;
+	}
+	
+	@Override
+	public String dailyWorkout() {
+		return "Run 5k";
+	}
+
+	@Override
+	public String getFortuneService() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

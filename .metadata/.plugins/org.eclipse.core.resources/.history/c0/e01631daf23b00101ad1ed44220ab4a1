@@ -1,0 +1,16 @@
+package com.app;
+
+import com.app.bean.Student;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class App 
+{
+	public static void main(String[] args) 
+	{
+		ObjectMapper objectMapper = new ObjectMapper();
+		Student stud = objectMapper.readValue(new File("data/sample,json"), Student.class);
+		System.out.println(stud.getFirstName());
+		System.out.println(stud.isActive());
+	}
+
+}

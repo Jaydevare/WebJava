@@ -1,0 +1,36 @@
+package com.app.beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+import com.app.utility.Coach;
+import com.app.utility.FortuneService;
+@Component
+public class TennisCoachh implements Coach {
+	@Autowired
+	@Qualifier("happyFortune")
+	private FortuneService fortuneService;
+	
+	public TennisCoachh() {
+		System.out.println("In def of Tennis");
+	}
+	
+	//@Autowired
+	public TennisCoachh(/*@Qualifier("sadFortune")*/ FortuneService fortuneService) {
+		super();
+		System.err.println("In param of tennis");
+		this.fortuneService = fortuneService;
+	}
+	
+	@Override
+	public String dailyWorkout() {
+		return "Run 5k";
+	}
+
+	@Override
+	public String getFortuneService() {
+		return fortuneService.getfortune();
+	}
+
+}

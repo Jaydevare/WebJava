@@ -1,0 +1,7 @@
+package com.app.utility;
+
+public interface Coach {
+
+	public String dailyWorkout();
+	public String getFortuneService();
+}

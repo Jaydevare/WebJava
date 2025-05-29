@@ -1,0 +1,19 @@
+package com.app;
+
+import lombok.Data;
+
+@Data
+public class Human 
+{
+	Heart heart;
+	
+	public void pump() 
+	{
+		if(heart!=null)
+		{
+			heart.pumping();
+		}
+		else
+			System.out.println("You are Dead");
+	}
+}

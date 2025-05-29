@@ -1,0 +1,26 @@
+package com.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class Human 
+{
+	@Autowired
+	Heart heart;
+	
+	public Human() {};
+	
+	public void pump() 
+	{
+		if(heart!=null)
+		{
+			heart.pumping();
+		}
+		else
+			System.out.println("You are Dead");
+	}
+}

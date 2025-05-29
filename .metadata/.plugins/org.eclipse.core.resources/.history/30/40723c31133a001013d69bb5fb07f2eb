@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1><ins>Student Form</ins></h1>
+<form:form action="studentConfirmation" method="post">
+Enter First Name:
+<form:input path="firstName"/>
+<br><br>
+Enter Last Name:
+<form:input path="lastName"/>
+<br><br>
+Select Country:
+<form:select path="country">
+<form:options items="${theStudent.countryOptions }"/>
+</form:select>
+<br><br>
+Select Your Favroite Language:
+JAVA<form:radiobutton path="favoriteLanguage" value="Java"/>
+SPRING-BOOT<form:radiobutton path="favoriteLanguage" value="Spring-Boot"/>
+MICROSERVICES<form:radiobutton path="favoriteLanguage" value="Microservices"/>
+</form:form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+package com.app;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+public class Human
+{
+	
+	private Heart heart;
+	
+	public Human() {}
+	
+	
+	public Human( Heart heart) {
+		super();
+		this.heart = heart;
+	}
+	@Autowired
+	@Qualifier("octopusHeart")
+	public void setHeart(Heart heart) {
+		this.heart = heart;
+	}
+	
+	public void pump()
+	{
+		if(heart!=null)
+		{
+			heart.pumping();
+			System.out.println(heart.getAnimal()+"  "+heart.getHearts());
+		}
+		else {
+			System.out.println("you are dead");
+		}
+	}
+}

@@ -1,0 +1,7 @@
+package com.app.beans;
+
+import com.app.utility.Coach;
+
+public class CircketCoach implements Coach {
+
+}

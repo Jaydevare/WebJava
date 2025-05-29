@@ -1,0 +1,31 @@
+package com.app.beans;
+
+import com.app.utility.Coach;
+import com.app.utility.FortuneService;
+
+public class CircketCoach implements Coach {
+
+	private FortuneService fortuneService;
+	
+	public CircketCoach() {
+		System.out.println("In def of cricket");
+	}
+	
+	public CircketCoach(FortuneService fortuneService) {
+		super();
+		System.out.println("In param of cricket");
+		this.fortuneService = fortuneService;
+	}
+
+	@Override
+	public String dailyWorkout() {
+		
+		return "Do Bowling Pratice";
+	}
+
+	@Override
+	public String getFortuneService() {
+		return fortuneService.getfortune();
+	}
+
+}

@@ -1,0 +1,65 @@
+package com.app.rest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.app.entity.Employee;
+
+@RestController
+@RequestMapping("/api")
+public class EmployeeRest 
+{
+	List<Employee> list = new ArrayList<Employee>();
+	
+	public EmployeeRest()
+	{
+		list.add(new Employee(1,"Jay","Devare","jay@gamil.com"));
+		list.add(new Employee(2,"Jyotie","Jadhav","jyotie@gamil.com"));
+		list.add(new Employee(3,"Mayur","javare","Mayur@gamil.com"));
+		list.add(new Employee(4,"Sumedh","Loharikar","Sumedh@gamil.com"));
+		list.add(new Employee(5,"Rupesh","Mohare","rupesh@gamil.com"));
+	}
+	
+	@GetMapping("/hello")
+	public String sayHello()
+	{
+		return "Hello Java!!!";
+	}
+	
+	@GetMapping("/employees")
+	public List<Employee> getEmployee()
+	{
+		return list;
+	}
+	
+	@GetMapping("employee/{employeeId}")
+	public Employee getEmployeeById(@PathVariable("employeeId") int id)
+	{
+		return list.get(id-1);
+	}
+	
+	@DeleteMapping("deleteemployee/{employeeId}")
+	public void deleteEmployeeById(@PathVariable("employeeId") int id)
+	{
+		list.remove(id-1);
+	}
+	
+	@PutMapping("updateEmployee/{employeeId}")
+	public void updateEmployee(@PathVariable("employeeId") int id,@RequestBody Employee e)
+	{
+		e.setFirstName("Mayuri");
+		e.setLastName("mayuri@gamil.com");
+		e.setEmail("patil");
+		list.set(id-1, e);
+	}
+	
+}

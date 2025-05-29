@@ -1,0 +1,29 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1><ins> Student Details </ins></h1>
+Student First Name: ${theStudent.firstName }
+<br><br>
+
+Student Last Name: ${theStudent.lastName }
+<br><br>
+
+Student Country : ${theStudent.country }
+<br><br>
+
+Student Favroite Language : ${theStudent.favoriteLanguage		 }
+<br><br>
+
+Operating System:
+<c:forEach var="OS" items="${theStudent.operatingSystem }">
+<ul>${OS }</ul>
+</c:forEach>
+</body>
+</html>

@@ -1,0 +1,6 @@
+spring.application.name=SpringBootDemo4
+info.app.name = Spring Boot Actuator
+info.app.description = To Monitor and manage application
+info.app.version = 3.5.0
+management.endpoints.web.exposure.include = * 
+management.info.env.enabled = true

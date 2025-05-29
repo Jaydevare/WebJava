@@ -1,0 +1,21 @@
+package com.app.rest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.app.entity.Employee;
+
+@RestController
+@RequestMapping("/api")
+public class EmployeeRest 
+{
+	List<Employee> list = new ArrayList<Employee>();
+	
+	public Employee RestContoller()
+	{
+		list.add(new Employee(1,"Jay","Devare","jay@gamil.com"));
+	}
+}

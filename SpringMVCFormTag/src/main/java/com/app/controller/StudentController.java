@@ -1,0 +1,26 @@
+package com.app.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.app.model.Student;
+
+@Controller
+@RequestMapping("/student")
+public class StudentController 
+{
+	@RequestMapping("/showForm")
+	public String showForm(Model model) 
+	{
+		model.addAttribute("theStudent",new Student());
+		return "studentForm";
+	}
+	
+	@RequestMapping("/studentConfirmation")
+	public String studentConfirm(@ModelAttribute("theStudent") Student stud) 
+	{
+		return "studentConfirmation";
+	}
+}

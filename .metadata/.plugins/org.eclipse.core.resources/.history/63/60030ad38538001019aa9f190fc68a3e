@@ -1,0 +1,40 @@
+package com.app;
+
+public class Heart {
+	private String nameOfAnimal;
+	private String noOfHearts;
+	
+	public Heart() {}
+
+
+	
+	public String getNameOfAnimal() {
+		return nameOfAnimal;
+	}
+
+
+
+	public void setNameOfAnimal(String nameOfAnimal) {
+		this.nameOfAnimal = nameOfAnimal;
+	}
+
+
+
+	public String getNoOfHearts() {
+		return noOfHearts;
+	}
+
+
+
+	public void setNoOfHearts(String noOfHearts) {
+		this.noOfHearts = noOfHearts;
+	}
+
+
+
+	public void pumping()
+	{
+		System.out.println("Your heart is pumping");
+		System.out.println("you are alive");
+	}
+}

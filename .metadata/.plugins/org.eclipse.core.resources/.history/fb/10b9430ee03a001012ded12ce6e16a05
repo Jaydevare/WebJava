@@ -1,0 +1,9 @@
+package com.app.dao;
+
+public class MembershipDOA 
+{
+	public void addAccount()
+	{
+		System.out.println("Doing my MemDB work: Adding an account");
+	}
+}

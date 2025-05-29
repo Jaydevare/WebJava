@@ -1,0 +1,13 @@
+package com.app.beans;
+
+import com.app.utility.FortuneService;
+
+public abstract class SadFortune implements FortuneService {
+
+	@Override
+	public String fortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

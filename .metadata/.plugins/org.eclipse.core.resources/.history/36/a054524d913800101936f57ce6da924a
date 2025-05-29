@@ -1,0 +1,35 @@
+package com.app.beans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+import com.app.utility.Coach;
+import com.app.utility.FortuneService;
+
+
+public class CircketCoach implements Coach {
+
+	private FortuneService fortuneService;
+	
+	public CircketCoach() {
+		System.out.println("In def of cricket");
+	}
+	
+	@Autowired
+	public CircketCoach(@Qualifier("HappyFortune") FortuneService fortuneService) {
+		super();
+		System.out.println("In param of cricket");
+		this.fortuneService = fortuneService;
+	}
+
+	@Override
+	public String dailyWorkout() {
+		return "Do Bowling Pratice";
+	}
+
+	@Override
+	public String getFortuneService() {
+		return fortuneService.getfortune();
+	}
+
+}

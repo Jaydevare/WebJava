@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+<bean name="employee" class="com.app.Employee">
+<constructor-arg value="1" type="int"></constructor-arg>
+<constructor-arg value="Jay"></constructor-arg>
+<constructor-arg value="100000.7568" type="double"></constructor-arg>
+<constructor-arg ref="date"></constructor-arg>
+</bean>
+
+<bean name="date" class="com.app.Date">
+<constructor-arg value="23" type="int"></constructor-arg>
+<constructor-arg value="05" type="int"></constructor-arg>
+<constructor-arg value="2025" type="int"></constructor-arg>
+</bean>
+
+
+</beans>

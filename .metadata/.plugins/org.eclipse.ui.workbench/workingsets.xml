@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1747212137724_0" label="Java Main Sources" name="Java Main Sources"/>
+<workingSet editPageId="org.eclipse.jdt.internal.ui.DynamicSourcesWorkingSet" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1747212137783_1" label="Java Test Sources" name="Java Test Sources"/>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1748421814458_3" label="SpringDemo1" name="SpringDemo1">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SpringDemo1" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1748491171016_4" label="SpringBootDemo2" name="SpringBootDemo2">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SpringBootDemo2" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1748491351331_5" label="SpringBootDemo3" name="SpringBootDemo3">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SpringBootDemo3" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1748493318290_6" label="SpringBootDemo4" name="SpringBootDemo4">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SpringBootDemo4" type="4"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1747212144528_2" label="Window Working Set" name="Aggregate for window 1747212144528"/>
+</workingSetManager>

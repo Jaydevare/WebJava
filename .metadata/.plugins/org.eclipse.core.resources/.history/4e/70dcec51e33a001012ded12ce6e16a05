@@ -1,0 +1,21 @@
+package com.app.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class MyLoggingAspect 
+{
+	@Before("execute(public void com.app.dao.AccountDAO.addAccount())")
+	public void addAccountBeforeAdvice() 
+	{
+		System.out.println("Before Advice called");
+	}
+	@Before("execute(puliv void com.app.dao.AccountDAO.add*())")
+	public void beforeAddAccountAdvice() 
+	{
+		System.err.println("Executing before advice on all Add method()");
+	}
+}

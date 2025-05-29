@@ -1,0 +1,24 @@
+package com.app;
+
+public class Mobile
+{
+	public static void main(String[] args) {
+		Vodafone vi =  new Vodafone();
+		vi.calling();
+		vi.data();
+		
+		Airtel ar =  new Airtel();
+		ar.calling();
+		ar.data();
+		
+		Sim si = new Vodafone();
+		si.calling();
+		si.data();
+		
+		Sim arr = new Airtel();
+		arr.calling();
+		arr.data();
+				
+	}
+
+}

@@ -1,0 +1,7 @@
+package com.app.beans;
+
+import com.app.utility.FortuneService;
+
+public class SadFortune implements FortuneService {
+
+}
